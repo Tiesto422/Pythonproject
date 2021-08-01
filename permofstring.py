@@ -5,7 +5,7 @@ def permute(s, result):
         return
 
     for i in range(len(s)):
-        permute(s[0:i] + s[i + 1:], result + s[i])
+        permute(s[:i] + s[i + 1:], result + s[i])
 
 
 # Driver Code
@@ -15,6 +15,6 @@ results = []
 s = input("Enter the string : ")
 
 print("All possible strings are : ")
-permute(s, result)
+permute(list(s), result)
 print(results)
 print(len(results))
